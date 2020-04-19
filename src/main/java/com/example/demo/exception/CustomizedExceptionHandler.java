@@ -55,55 +55,8 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler {
         }
         ApiError error = new ApiError("Validation Failed", details);
         return new ResponseEntity<Object>(error, HttpStatus.BAD_REQUEST);
-    }
-    
-    
-   
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    }	
 
-	/*
-	 * @ExceptionHandler(Exception.class) public final ResponseEntity<Object>
-	 * handleAllExceptions(Exception ex, WebRequest request) { String error
-	 * ="NOT FOUND";
-	 * 
-	 * //creating exception response structure ApiError apiError= new
-	 * ApiError(HttpStatus.BAD_REQUEST, new Date(), error,
-	 * request.getDescription(false));
-	 * 
-	 * //returning exception structure and specific status return new
-	 * ResponseEntity<Object>(apiError, HttpStatus.BAD_REQUEST);
-	 * 
-	 * }
-	 */
-	
-	
-		
-	/*
-	 * @ExceptionHandler(NoSuchElementFound.class) public final
-	 * ResponseEntity<Object> handleUserNotFoundExceptions(NoSuchElementFound ex,
-	 * WebRequest request)throws Exception { String message ="NOT FOUND";
-	 * 
-	 * ApiError apiError= new ApiError(HttpStatus.NOT_FOUND, new Date(),
-	 * message,request.getDescription(false));
-	 * 
-	 * return new ResponseEntity<Object>(apiError, HttpStatus.NOT_FOUND); }
-	 */
-
-	}
+}
 
 
