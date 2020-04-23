@@ -12,7 +12,7 @@ import com.example.demo.repository.PlanRepository;
 
 @Service
 @Transactional
-public class PlanService {
+public class PlanService extends CustomizedExceptionHandler{
 	
 	@Autowired
 	private PlanRepository planRepo;
@@ -26,7 +26,7 @@ public class PlanService {
 	}
 	
 	public Plan getPlanById(int plan_ID) {
-		return planRepo.findById(plan_ID).get();
+		return planRepo.findById(plan_ID).orElseThrow(()-> new NoSuchRecordException("NO SUCH ELEMENT FOUND!!")); 
 	}
 	
 	public void deletePlanById(int plan_ID) {
